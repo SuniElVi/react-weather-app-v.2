@@ -1,0 +1,30 @@
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  max-width: 190px;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  line-height: 28px;
+  padding: 0 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  background-color: #F4EEEE;
+  color: #5878BE;
+  transition: 0.3s ease;
+}
+
+.input::placeholder {
+  color: #5878BE;
+}
+
+.input:focus, input:hover {
+  outline: none;
+  border-color: #5878BE;
+box-shadow: 0 0 0 4px rgba(88, 120, 190, 50%);
+}
