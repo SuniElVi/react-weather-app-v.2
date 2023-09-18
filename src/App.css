@@ -1,9 +1,24 @@
-.group {
-  display: flex;
-  line-height: 28px;
-  align-items: center;
-  position: relative;
-  max-width: 190px;
+:root {
+  --primary-color: #96c291;
+  --secondary-color: #ffdcaa;
+  --accent-color: #5878be;
+  --background-color: #f4eeee;
+  --text-color: #212121;
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Overpass", sans-serif;
+}
+
+.App {
+  max-width: 850px;
+  height: 600px;
+  margin: 30px auto;
+  padding: 40px;
+  background-color: white;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 10px;
 }
 
 .input {
@@ -14,17 +29,42 @@
   border: 2px solid transparent;
   border-radius: 5px;
   outline: none;
-  background-color: #F4EEEE;
-  color: #5878BE;
+  background-color: var(--background-color);
+  color: var(--primary-color);
   transition: 0.3s ease;
 }
 
 .input::placeholder {
-  color: #5878BE;
+  color: var(--primary-color);
 }
 
-.input:focus, input:hover {
+.input:focus,
+input:hover {
   outline: none;
-  border-color: #5878BE;
-box-shadow: 0 0 0 4px rgba(88, 120, 190, 50%);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(150, 194, 145, 50%);
+}
+
+.btn {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  width: 125px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.btn:hover {
+  box-shadow: 0 0 0 4px rgba(150, 194, 145, 50%);
+  background-color: var(--primary-color);
+}
+
+h6 {
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0px;
+  border: 3px solid var(--accent-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 500;
 }
